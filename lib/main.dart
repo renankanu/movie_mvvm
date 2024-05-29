@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_mvvm/view/home_view.dart';
-import 'package:timezone/data/latest.dart' as tz;
 
 void main() {
-  tz.initializeTimeZones();
   runApp(const MyApp());
 }
 
