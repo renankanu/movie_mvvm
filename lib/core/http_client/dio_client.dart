@@ -2,6 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:movie_mvvm/core/constants/app_url.dart';
 import 'package:movie_mvvm/core/http_client/api_response.dart';
 import 'package:movie_mvvm/core/http_client/client.dart';
+import 'package:movie_mvvm/core/http_client/interceptors/auth_interceptor.dart';
+
+import 'interceptors/pretty_dio_logger.dart';
 
 class DioClient implements Client {
   late Dio _dio;
@@ -11,7 +14,10 @@ class DioClient implements Client {
     _dio.options.baseUrl = AppUrl.baseUrl;
     _dio.options.connectTimeout = const Duration(minutes: 1);
     _dio.options.receiveTimeout = const Duration(minutes: 1);
-    _dio.interceptors.add(LogInterceptor(responseBody: true));
+    _dio.interceptors.addAll([
+      AuthInterceptor(),
+      PrettyDioLogger(),
+    ]);
   }
 
   @override

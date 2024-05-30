@@ -6,6 +6,6 @@ class AuthInterceptor extends Interceptor {
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     final token = dotenv.env['API_KEY'];
     options.headers['Authorization'] = 'Bearer $token';
-    super.onRequest(options, handler);
+    handler.next(options);
   }
 }
