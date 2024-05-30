@@ -6,7 +6,7 @@ import '../data/remote/movies.dart';
 import '../model/movie.dart';
 
 class MovieRepositoryImpl implements MovieRepository {
-  final RemoveMovieDataSource dataSource;
+  final RemoteMovieDataSource dataSource;
 
   MovieRepositoryImpl(this.dataSource);
 

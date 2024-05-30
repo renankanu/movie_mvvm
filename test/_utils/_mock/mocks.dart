@@ -6,6 +6,6 @@ import 'package:movie_mvvm/repository/movie_repository.dart';
 @GenerateMocks([
   DioClient,
   MovieRepository,
-  RemoveMovieDataSource,
+  RemoteMovieDataSource,
 ])
 void main() {}

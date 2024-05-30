@@ -2,14 +2,14 @@ import 'package:movie_mvvm/core/errors/server_exception.dart';
 import 'package:movie_mvvm/core/http_client/http_client.dart';
 import 'package:movie_mvvm/model/movie.dart';
 
-abstract class RemoveMovieDataSource {
+abstract class RemoteMovieDataSource {
   Future<List<Movie>> getTrendTodayMovies();
 }
 
-class RemoveMovieDataSourceImpl implements RemoveMovieDataSource {
+class RemoteMovieDataSourceImpl implements RemoteMovieDataSource {
   final DioClient client;
 
-  RemoveMovieDataSourceImpl(this.client);
+  RemoteMovieDataSourceImpl(this.client);
 
   @override
   Future<List<Movie>> getTrendTodayMovies() async {

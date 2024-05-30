@@ -1,0 +1,46 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/tkHQ7tnYYUEnqlrKuhufIsSVToU.jpg",
+            "id": 437342,
+            "original_title": "The First Omen",
+            "overview": "Uma mulher começa a questionar a sua própria fé quando descobre uma terrível conspiração para provocar o nascimento do mal encarnado em Roma.",
+            "poster_path": "/ybAcizMKEdeVreFj2R9effkF5Ii.jpg",
+            "media_type": "movie",
+            "adult": false,
+            "title": "A Primeira Profecia",
+            "original_language": "en",
+            "genre_ids": [
+                27
+            ],
+            "popularity": 703.836,
+            "release_date": "2024-04-03",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 205
+        },
+        {
+            "backdrop_path": "/otfoeC96neoOdA4HqsX06OWuzE9.jpg",
+            "id": 719221,
+            "original_title": "Tarot",
+            "overview": "Quando um grupo de amigos irresponsavelmente viola a regra sagrada da leitura de tarô, a de nunca usar o deque de outra pessoa, eles libertam um mal inominável que estava preso nas cartas. Um por um, eles encaram seu destino e acabam em uma corrida contra a morte para escapar do futuro previsto para eles nas cartas.",
+            "poster_path": "/fGamTFPbJAAUnC2fbJbApTgi9EE.jpg",
+            "media_type": "movie",
+            "adult": false,
+            "title": "O Tarô da Morte",
+            "original_language": "en",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "popularity": 735.97,
+            "release_date": "2024-05-01",
+            "video": false,
+            "vote_average": 5.6,
+            "vote_count": 92
+        }
+    ],
+    "total_pages": 1,
+    "total_results": 2
+}

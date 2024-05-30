@@ -105,7 +105,7 @@ class MockMovieRepository extends _i1.Mock implements _i5.MovieRepository {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockRemoveMovieDataSource extends _i1.Mock
-    implements _i10.RemoveMovieDataSource {
+    implements _i10.RemoteMovieDataSource {
   MockRemoveMovieDataSource() {
     _i1.throwOnMissingStub(this);
   }
