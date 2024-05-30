@@ -24,6 +24,11 @@ class DioClient implements Client {
       queryParameters: queryParameters,
       options: Options(headers: headers),
     );
-    return ApiResponse(response.data, response.statusMessage);
+
+    return ApiResponse(
+      response.data,
+      message: response.statusMessage,
+      statusCode: response.statusCode,
+    );
   }
 }
