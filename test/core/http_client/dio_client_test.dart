@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_mvvm/core/http_client/interceptors/auth_interceptor.dart';
@@ -15,6 +16,9 @@ class MockResponseInterceptorHandler extends Mock
 class MockErrorInterceptorHandler extends Mock
     implements ErrorInterceptorHandler {}
 
+// Test created for the interceptors
+// PrettyDioLogger and AuthInterceptor
+// This test is not required, but it is good to have it
 void main() {
   group('Pretty Dio Interceptor', () {
     final mockRequestHandler = MockRequestInterceptorHandler();
@@ -86,6 +90,7 @@ void main() {
     final authInterceptor = AuthInterceptor();
 
     test('adds Authorization header', () {
+      dotenv.testLoad(fileInput: 'API_KEY=foo');
       final options = RequestOptions(
         path: '/test',
         method: 'GET',

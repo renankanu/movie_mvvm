@@ -9,7 +9,7 @@
 .history
 .svn/
 .env
-./coverage/
+coverage
 migrate_working_dir/
 
 # IntelliJ related
