@@ -5,7 +5,7 @@ class Movie {
   double popularity;
   String releaseDate;
   double voteAverage;
-  String voteCount;
+  int voteCount;
   String posterPath;
 
   Movie({
@@ -30,18 +30,5 @@ class Movie {
       voteCount: json['vote_count'],
       posterPath: json['poster_path'],
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'overview': overview,
-      'original_language': originalLanguage,
-      'popularity': popularity,
-      'release_date': releaseDate,
-      'vote_average': voteAverage,
-      'vote_count': voteCount,
-      'poster_path': posterPath,
-    };
   }
 }

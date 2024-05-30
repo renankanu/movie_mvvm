@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:movie_mvvm/core/constants/app_url.dart';
 import 'package:movie_mvvm/core/http_client/api_response.dart';
 import 'package:movie_mvvm/core/http_client/client.dart';
-import 'package:movie_mvvm/core/http_client/interceptors/auth_interceptor.dart';
 
+import 'interceptors/auth_interceptor.dart';
 import 'interceptors/pretty_dio_logger.dart';
 
 class DioClient implements Client {
