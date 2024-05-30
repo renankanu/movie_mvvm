@@ -10,7 +10,7 @@ void main() {
   late RemoteMovieDataSourceImpl dataSource;
   late MockDioClient mockDioClient;
 
-  setUp(() {
+  setUp(() async {
     mockDioClient = MockDioClient();
     dataSource = RemoteMovieDataSourceImpl(mockDioClient);
   });

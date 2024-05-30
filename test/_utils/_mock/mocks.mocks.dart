@@ -101,12 +101,12 @@ class MockMovieRepository extends _i1.Mock implements _i5.MovieRepository {
       ) as _i4.Future<_i6.Either<_i7.Failure, List<_i8.Movie>>>);
 }
 
-/// A class which mocks [RemoveMovieDataSource].
+/// A class which mocks [RemoteMovieDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRemoveMovieDataSource extends _i1.Mock
+class MockRemoteMovieDataSource extends _i1.Mock
     implements _i10.RemoteMovieDataSource {
-  MockRemoveMovieDataSource() {
+  MockRemoteMovieDataSource() {
     _i1.throwOnMissingStub(this);
   }
 

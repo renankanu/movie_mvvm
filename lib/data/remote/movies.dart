@@ -1,3 +1,4 @@
+import 'package:movie_mvvm/core/constants/app_url.dart';
 import 'package:movie_mvvm/core/errors/server_exception.dart';
 import 'package:movie_mvvm/core/http_client/http_client.dart';
 import 'package:movie_mvvm/model/movie.dart';
@@ -13,7 +14,7 @@ class RemoteMovieDataSourceImpl implements RemoteMovieDataSource {
 
   @override
   Future<List<Movie>> getTrendTodayMovies() async {
-    final response = await client.get('/movie');
+    final response = await client.get(AppUrl.trending);
 
     if (response.statusCode == 200) {
       final List<Movie> movies = [];

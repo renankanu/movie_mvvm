@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie_mvvm/view/home_view.dart';
+import 'package:movie_mvvm/view_model/movie_cubit/movie_cubit.dart';
 
-void main() {
+import 'injector.dart' as di;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  di.init();
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
@@ -10,13 +18,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Movie MVVM Architecture',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-        useMaterial3: true,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<MovieCubit>(create: (_) => di.injector<MovieCubit>()),
+      ],
+      child: MaterialApp(
+        title: 'Movie MVVM Architecture',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+          useMaterial3: true,
+        ),
+        home: const HomeView(),
       ),
-      home: const HomeView(),
     );
   }
 }
