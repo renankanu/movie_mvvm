@@ -17,7 +17,8 @@ class MovieRepositoryImpl implements MovieRepository {
       return Right(movies);
     } on ServerException {
       return const Left(
-          ServerFailure('Não foi possível carregar os filmes do dia'));
+        ServerFailure('Não foi possível carregar os filmes do dia'),
+      );
     }
   }
 }

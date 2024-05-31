@@ -15,7 +15,7 @@ class MovieCubit extends Cubit<MovieState> {
     emit(MovieLoadingState());
     final result = await movieRepository.getTrendTodayMovies();
     result.fold(
-      (error) => emit(MovieErrorState('Error: $error')),
+      (error) => emit(MovieErrorState(error.message)),
       (success) => emit(MovieLoadedState(success)),
     );
   }
