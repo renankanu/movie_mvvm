@@ -16,9 +16,6 @@ class MockResponseInterceptorHandler extends Mock
 class MockErrorInterceptorHandler extends Mock
     implements ErrorInterceptorHandler {}
 
-// Test created for the interceptors
-// PrettyDioLogger and AuthInterceptor
-// This test is not required, but it is good to have it
 void main() {
   group('Pretty Dio Interceptor', () {
     final mockRequestHandler = MockRequestInterceptorHandler();

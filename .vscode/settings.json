@@ -2,5 +2,6 @@
     "cSpell.words": [
         "fpdart",
         "mvvm"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
